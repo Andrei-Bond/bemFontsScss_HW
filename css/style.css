@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -74,97 +74,242 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.about__body {
-  font-family: "Lato";
-  max-width: 823px;
-  margin: 0px auto;
-}
-
-.about__header {
-  margin: 0px 0px 65px 0px;
-}
-
-.about__title {
-  margin: 0px 0px 30px 0px;
-}
-
-.about__text {
-  max-width: 688px;
-  color: #868585;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 25.89px;
-  text-align: center;
-  margin: 0px auto;
-}
-
-.about__row {
+.form-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 0;
   margin: 0px -15px;
 }
 
-.about__column {
+.form__column {
   padding: 0px 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.333%;
-          flex: 0 0 33.333%;
 }
 
-.title {
-  font-size: 34px;
-  font-weight: 700;
-  text-align: center;
+.btn {
+  display: inline-block;
+  padding: 0px 0px;
+  height: 47px;
+  padding: 0px 42px;
+  line-height: 45px;
   text-transform: uppercase;
-  letter-spacing: 8.95px;
-  position: relative;
-  padding: 0px 0px 30px 0px;
+  font-size: 16px;
+  letter-spacing: 0.67;
+  font-family: "Lato";
+  text-transform: uppercase;
 }
 
-.title:after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 81px;
-  background-color: #000;
-  left: 45%;
-  margin: 50px 0px 0px 0px;
-  bottom: 0;
+.btn_w {
+  color: #fff;
+  border: 1px solid #fff;
 }
 
-.item-about__icon {
-  margin: 0px auto;
-  width: 92px;
-  height: 92px;
-  border: 3px solid #f1f1f1;
-  border-radius: 50%;
+.btn.fw {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainBlock {
+  padding: 50px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative;
+  background: url(/img/BG-Header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
-.item-about__title {
-  color: #000000;
-  font-family: Lato;
-  font-size: 22px;
+.mainBlock__contetn {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.mainBlock__text {
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 45px;
+  margin: 160px 0 200px 0;
+}
+
+.mainBlock__text:after {
+  content: '';
+  background-color: #ffffff;
+  width: 105px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  margin: 0px 0px 0px -52.5px;
+  bottom: 0px;
+}
+
+.mainBlock__title {
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5.43px;
+  margin-bottom: 10px;
+}
+
+.mainBlock__subtitle {
+  font-size: 26px;
   font-weight: 400;
-  text-align: center;
-  letter-spacing: 3.52px;
-  margin: 37px 0px 35px 0px;
+  letter-spacing: 4.15px;
 }
 
-.item-about__text {
-  color: #868585;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 26px;
-  text-align: center;
+.mainBlock__footer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
+.mainBlock__arrow {
+  margin-top: 75px;
+}
+
+.mainBlock__menu {
+  text-align: center;
+  position: relative;
+  left: 35%;
+  font-family: "Lato";
+}
+
+.mainBlock__menu__list {
+  width: 422px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/*.about {
+
+    &__body {
+        font-family: "Lato";
+        max-width: 823px;
+        margin: 0px auto;
+    }
+
+    &__header {
+        margin: 0px 0px 65px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__text {
+        max-width: 688px;
+        color: #868585;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25.89px;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    &__row {
+        display: flex;
+        margin: 0px -15px;
+    }
+
+    &__column {
+        padding: 0px 15px;
+        flex: 0 0 33.333%;
+    }
+}
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+    position: relative;
+    padding: 0px 0px 30px 0px;
+    &:after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 81px;
+        background-color: #000;
+        left: 45%;
+        margin: 50px 0px 0px 0px;
+        bottom: 0;
+
+    } 
+}
+.item-about {
+
+    &__icon {
+        margin: 0px auto;
+        width: 92px;
+        height: 92px;
+        border: 3px solid #f1f1f1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        color: #000000;
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 3.52px;
+        margin: 37px 0px 35px 0px;
+    }
+
+    &__text {
+        color: #868585;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 26px;
+        text-align: center;
+    }
+}*/

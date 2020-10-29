@@ -1,8 +1,148 @@
+
+@mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-size: 0;}
+@mixin inline-flex() {display: -webkit-inline-box;display: -moz-inline-box;display: -webkit-inline-flex;display: -ms-inline-flexbox;display: inline-flex;}
+
 // Файл обнуляющих стилей
 @import "nullstyle.scss";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import "form.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+$fontfamily:"Lato";
 
-.about {
+.wrapper{width: 100%; min-height: 100%; overflow: hidden;
+    @include flexbox();
+    flex-direction: column;
+    &.loaded{};
+}
+
+.mainBlock {
+    padding: 50px 0;
+    flex: 1 1 auto;
+    position: relative;
+    background: url(/img/BG-Header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__contetn {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+    }
+
+    &__icon {
+    }
+
+    &__text {
+        color: #ffffff;
+        position: relative;
+        padding-bottom: 45px;
+        margin: 160px 0 200px 0;
+        &:after{
+            content: '';
+            background-color: #ffffff;
+            width: 105px;
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            margin: 0px 0px 0px -52.5px ;
+            bottom: 0px;
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 34px;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5.43px;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 4.15px;
+    }
+
+    &__footer {
+        @include inline-flex();
+        flex-direction: column;
+    }
+
+    &__btn {
+
+    }
+
+    &__arrow {
+        margin-top: 75px;
+    }
+
+}
+.mainBlock {
+
+    &__menu {
+        text-align: center;
+        position: relative;
+        left: 35%;
+        font-family: "Lato";
+        &__list{
+        width: 422px;
+        @include flexbox();
+        flex: 1 1 auto;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        text-transform: uppercase;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.about {
 
     &__body {
         font-family: "Lato";
@@ -89,4 +229,4 @@
         line-height: 26px;
         text-align: center;
     }
-}
+}*/
