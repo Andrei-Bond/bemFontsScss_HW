@@ -1,4 +1,5 @@
 
+@import "mixins.scss";
 @mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-size: 0;}
 @mixin inline-flex() {display: -webkit-inline-box;display: -moz-inline-box;display: -webkit-inline-flex;display: -ms-inline-flexbox;display: inline-flex;}
 
@@ -24,13 +25,21 @@ $fontfamily:"Lato";
     background-size: cover;
     @include flexbox();
     justify-content: center;
-    align-items: center;
+    //align-items: center;
     text-align: center;
 
     &__contetn {
         position: relative;
         z-index: 1;
-        height: 100%;
+        //height: 100%;
+        flex: 1 1 auto;
+        .container {
+            height: 100%;
+            @include flexbox();
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        } 
     }
 
     &__icon {
@@ -40,7 +49,7 @@ $fontfamily:"Lato";
         color: #ffffff;
         position: relative;
         padding-bottom: 45px;
-        margin: 160px 0 200px 0;
+        margin: 1% 0 1% 0;
         &:after{
             content: '';
             background-color: #ffffff;
@@ -60,11 +69,21 @@ $fontfamily:"Lato";
         text-transform: uppercase;
         letter-spacing: 5.43px;
         margin-bottom: 10px;
-    }
+        @media (max-width: 400px){
+            font-size: 24px;
+            line-height: 20px;
+        }
+
+        }
+    
     &__subtitle {
         font-size: 26px;
         font-weight: 400;
         letter-spacing: 4.15px;
+        @media (max-width: 400px){
+            font-size: 18px;
+            line-height: 20px;
+        }
     }
 
     &__footer {
@@ -72,35 +91,39 @@ $fontfamily:"Lato";
         flex-direction: column;
     }
 
-    &__btn {
+    &__btn{
 
     }
 
     &__arrow {
-        margin-top: 75px;
-    }
-
-}
-.mainBlock {
-
-    &__menu {
-        text-align: center;
+        margin-top: 15%;
+        margin-bottom: 25%;
         position: relative;
-        left: 35%;
-        font-family: "Lato";
-        &__list{
-        width: 422px;
-        @include flexbox();
-        flex: 1 1 auto;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 15px;
-        text-transform: uppercase;
-        }
+        animation: arrow  2s infinite ease;
     }
 }
 
+.menu {
+    text-align: center;
+    position: relative;
+    left: 35%;
+    font-family: "Lato";
+    &__list{
+    width: 422px;
+    @include flexbox();
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    }
+}
 
+@keyframes arrow{
+    0%{top: 0}
+    50%{top: 20px}
+    100%{top: 0}
+}
 
 
 

@@ -10,8 +10,21 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- Кодировка страницы -->
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--<script type="text/javascript">
+			$(window).resize(function(event) {
+				mainblock();
+			});
+			function mainblock(){
+				var h=$(window).outerHeight();
+				$('.mainBlock').css('min-height',h);
+			}
+			mainblock();
+		</script>-->
+
 	</head>
 	<!-- Отображаемое тело страницы -->
+
 	<body>
 		<div class="wrapper">
 			<div class="mainBlock">
@@ -25,7 +38,7 @@
 							<div class="mainBlock__subtitle">for your app, logo, website</div>
 						</div>
 						<div class="mainBlock__footer">
-							<a href="#" class="mainBlock__btn btn btn_w">READ MORE</a>
+							<a href="#" class="mainBlock__btn btn btn_w"><span>READ MORE</span></a>
 							<a href="#" class="mainBlock__arrow"><img src="/img/icons/Arrow.png" alt="arrow"></a>
 						</div>
 					</div>
@@ -34,15 +47,16 @@
 			<div class="content">
 
 			</div>
-			<div class="mainBlock__menu">
-				<ul class="mainBlock__menu__list">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">ABOUT US</a></li>
-					<li><a href="#">PORTFOLIO</a></li>
-					<li><a href="#">CONTACT</a></li>
-				</ul>
+			
 			</div>
 		</div>
+		<div class="menu">
+			<ul class="menu__list">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">PORTFOLIO</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
 		<div class="about">
 			<div class="about__body">
 				<div class="about__header">
