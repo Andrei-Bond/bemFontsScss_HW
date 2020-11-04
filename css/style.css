@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0;
+  /*font-size: 0;*/
   margin: 0px -15px;
 }
 
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0;
+  /*font-size: 0;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0;
+  /*font-size: 0;*/
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0;
+  /*font-size: 0;*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -269,32 +269,6 @@ h1, h2, h3, h4, h5, h6 {
           animation: arrow  2s infinite ease;
 }
 
-.menu {
-  text-align: center;
-  position: relative;
-  left: 35%;
-  font-family: "Lato";
-}
-
-.menu__list {
-  width: 422px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
 @-webkit-keyframes arrow {
   0% {
     top: 0;
@@ -319,6 +293,68 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.content
+.menu {
+  padding: 22px 0px;
+}
+
+.content
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*font-size: 0;*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content
+.menu__link {
+  color: #3c3c3c;
+  font-family: Lato;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0px 25px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 767px) {
+  .content
+.menu__link {
+    margin: 0px 5px;
+  }
+}
+
+.content
+.menu__link:hover {
+  color: #ada074;
+}
+
+.content
+.menu__link_act {
+  color: #ada074;
+}
+
+/*.menu {
+    text-align: center;
+    position: relative;
+    left: 35%;
+    font-family: "Lato";
+    &__list{
+        width: 422px;
+        @include flexbox();
+        flex: 1 1 auto;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}*/
 /*.about {
 
     &__body {

@@ -1,6 +1,6 @@
 
 @import "mixins.scss";
-@mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-size: 0;}
+@mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; /*font-size: 0;*/}
 @mixin inline-flex() {display: -webkit-inline-box;display: -moz-inline-box;display: -webkit-inline-flex;display: -ms-inline-flexbox;display: inline-flex;}
 
 // Файл обнуляющих стилей
@@ -102,28 +102,74 @@ $fontfamily:"Lato";
         animation: arrow  2s infinite ease;
     }
 }
-
-.menu {
-    text-align: center;
-    position: relative;
-    left: 35%;
-    font-family: "Lato";
-    &__list{
-    width: 422px;
-    @include flexbox();
-    flex: 1 1 auto;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 15px;
-    text-transform: uppercase;
-    }
-}
-
 @keyframes arrow{
     0%{top: 0}
     50%{top: 20px}
     100%{top: 0}
 }
+//======================================================================================================
+.content
+//======================================================================================================
+.menu {
+    padding: 22px 0px;
+    
+
+    &__items {
+    }
+
+    &__list {
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        color: #3c3c3c;
+        font-family: Lato;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin: 0px 25px;
+        @media (max-width: 767px) {
+            margin: 0px 5px;
+        }
+        @include anim(0.3s, 0s)
+        &:hover{
+            color: #ada074;
+
+        }
+        &_act {
+            color: #ada074;
+        }
+    }
+}
+.container {
+}
+
+
+
+
+
+
+
+
+
+/*.menu {
+    text-align: center;
+    position: relative;
+    left: 35%;
+    font-family: "Lato";
+    &__list{
+        width: 422px;
+        @include flexbox();
+        flex: 1 1 auto;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}*/
+
+
 
 
 
