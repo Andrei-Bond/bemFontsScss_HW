@@ -1,6 +1,6 @@
 
 @import "mixins.scss";
-@mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; /*font-size: 0;*/}
+@mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-size: 0;}
 @mixin inline-flex() {display: -webkit-inline-box;display: -moz-inline-box;display: -webkit-inline-flex;display: -ms-inline-flexbox;display: inline-flex;}
 
 // Файл обнуляющих стилей
@@ -9,20 +9,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 $fontfamily:"Lato";
 
-.wrapper{width: 100%; min-height: 100%; overflow: hidden;
+.wrapper{width: 100%; min-height: 100%;
     @include flexbox();
     flex-direction: column;
     &.loaded{};
 }
 
 .mainBlock {
+    height: 100vh;
     padding: 50px 0;
     flex: 1 1 auto;
     position: relative;
     background: url(/img/BG-Header.jpg);
+    background-position: left;
     background-repeat: no-repeat;
-    background-position: center;
+    //background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     @include flexbox();
     justify-content: center;
     //align-items: center;
@@ -31,7 +34,7 @@ $fontfamily:"Lato";
     &__contetn {
         position: relative;
         z-index: 1;
-        //height: 100%;
+       // height: 100%;
         flex: 1 1 auto;
         .container {
             height: 100%;
@@ -91,20 +94,16 @@ $fontfamily:"Lato";
         flex-direction: column;
     }
 
-    &__btn{
-
-    }
-
     &__arrow {
-        margin-top: 15%;
+        margin-top: 20%;
         margin-bottom: 25%;
         position: relative;
-        animation: arrow  2s infinite ease;
+        animation: arrow 2s infinite ease;
     }
 }
 @keyframes arrow{
     0%{top: 0}
-    50%{top: 20px}
+    50%{top: 10px}
     100%{top: 0}
 }
 //======================================================================================================
@@ -112,6 +111,7 @@ $fontfamily:"Lato";
 //======================================================================================================
 .menu {
     padding: 22px 0px;
+    border: 1px solid #f2f2f2;
     
 
     &__items {
@@ -142,143 +142,87 @@ $fontfamily:"Lato";
         }
     }
 }
-.container {
-}
+
+//======================================================================================================
+.about {
+    padding: 0px 0px 60px 0px;
 
 
-
-
-
-
-
-
-
-/*.menu {
-    text-align: center;
-    position: relative;
-    left: 35%;
-    font-family: "Lato";
-    &__list{
-        width: 422px;
-        @include flexbox();
-        flex: 1 1 auto;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 15px;
-        text-transform: uppercase;
-    }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.about {
-
-    &__body {
-        font-family: "Lato";
-        max-width: 823px;
-        margin: 0px auto;
-    }
-
-    &__header {
+    &__header-block {
         margin: 0px 0px 65px 0px;
     }
 
-    &__title {
-        margin: 0px 0px 30px 0px;
-    }
-
-    &__text {
+    &__subtitle {
         max-width: 688px;
         color: #868585;
         font-size: 14px;
         font-weight: 300;
         line-height: 25.89px;
         text-align: center;
-        margin: 0px auto;
+        margin: 65px auto 0px auto;
     }
 
     &__row {
-        display: flex;
+        @include flexbox();
         margin: 0px -15px;
+        @media (max-width: 550px){
+            flex-direction: column;
+        }
     }
 
     &__column {
+        margin: 0px 0px 30px 0px;
+        flex: 0 1 33.333%;
         padding: 0px 15px;
-        flex: 0 0 33.333%;
     }
 }
-.title {
-    font-size: 34px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 8.95px;
-    position: relative;
-    padding: 0px 0px 30px 0px;
-    &:after{
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 81px;
-        background-color: #000;
-        left: 45%;
-        margin: 50px 0px 0px 0px;
-        bottom: 0;
+.container {
+    font-family: "Lato";
+    max-width: 823px;
+    margin: 0px auto;
+}
+.header-block {
 
-    } 
+    &__title {
+        margin-top: 55px;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8.95px;
+        position: relative;
+        padding: 0px 0px 40px 0px;
+        &:after{
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 16%;
+            background-color: #000;
+            left: 42%;
+            bottom: 0;
+        }
+    }
 }
 .item-about {
+    //text-align: center;
+    //max-width: 900px;
 
     &__icon {
-        margin: 0px auto;
+        margin: 15px auto;
         width: 92px;
         height: 92px;
         border: 3px solid #f1f1f1;
         border-radius: 50%;
-        display: flex;
+        @include flexbox();
         align-items: center;
         justify-content: center;
-    }
+        &_l {
+            img {
+                position: relative;
+                left: 4px;
+            }
+        }
+    }   
 
     &__title {
         color: #000000;
@@ -298,4 +242,76 @@ $fontfamily:"Lato";
         line-height: 26px;
         text-align: center;
     }
-}*/
+}
+//======================================================================================================
+
+.portfolio {
+
+    &_items {
+        @include flexbox;
+        margin: 0px -15px;
+        flex-wrap: wrap;
+    }
+
+    &_btn {
+    }
+
+    &__header-block {
+    }
+
+    &__filter {
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 10px 15px;
+    }
+
+    &__item {
+        img{max-width: 100%;}
+    }
+
+    &__footer {
+        text-align: center;
+        margin: 30px auto;
+    }
+}
+.container {
+}
+.header-block {
+
+    &__title {
+    }
+}
+.filter {
+
+    padding: 22px 0px;
+
+    &__list {
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__item {
+        color: #3c3c3c;
+        font-family: Lato;
+        font-size: 15px;
+        text-transform: uppercase;
+        margin: 40px 25px;
+        cursor: pointer;
+        @include anim(0.3s, 0s)
+        &:hover{
+            color: #ada074;
+        }
+        &.active {
+            color: #ada074;
+        }
+    }
+}
+.btn {
+
+    &_b {
+    }
+}

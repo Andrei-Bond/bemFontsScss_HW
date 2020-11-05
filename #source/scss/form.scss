@@ -37,6 +37,13 @@
             background-color: #fff;
         }
     }
+    &_b {
+        color: #000;
+        border: 1px solid #000;
+        &:after{
+            background-color: #000;
+        }
+    }
     span {
         z-index: 1;
         @include anim(0.3s, 0s);
@@ -45,6 +52,9 @@
     &:hover{
         &.btn_w{
             color: #000;
+        }
+        &.btn_b{
+            color: #fff;
         }
         &:after{
             @include scale(1);
