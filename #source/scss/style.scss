@@ -1,11 +1,11 @@
 
-@import "mixins.scss";
+@import "_mixins.scss";
 @mixin flexbox() {display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-size: 0;}
 @mixin inline-flex() {display: -webkit-inline-box;display: -moz-inline-box;display: -webkit-inline-flex;display: -ms-inline-flexbox;display: inline-flex;}
 
 // Файл обнуляющих стилей
-@import "nullstyle.scss";
-@import "form.scss";
+@import "_nullstyle.scss";
+@import "_form.scss";
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 $fontfamily:"Lato";
 
@@ -45,8 +45,6 @@ $fontfamily:"Lato";
         } 
     }
 
-    &__icon {
-    }
 
     &__text {
         color: #ffffff;
@@ -113,10 +111,6 @@ $fontfamily:"Lato";
     padding: 22px 0px;
     border: 1px solid #f2f2f2;
     
-
-    &__items {
-    }
-
     &__list {
         @include flexbox();
         justify-content: center;
@@ -253,15 +247,6 @@ $fontfamily:"Lato";
         flex-wrap: wrap;
     }
 
-    &_btn {
-    }
-
-    &__header-block {
-    }
-
-    &__filter {
-    }
-
     &__column {
         flex: 0 1 50%;
         padding: 10px 15px;
@@ -276,13 +261,7 @@ $fontfamily:"Lato";
         margin: 30px auto;
     }
 }
-.container {
-}
-.header-block {
 
-    &__title {
-    }
-}
 .filter {
 
     padding: 22px 0px;
@@ -310,8 +289,40 @@ $fontfamily:"Lato";
         }
     }
 }
-.btn {
 
-    &_b {
+//======================================================================================================
+
+.partners {
+    background: url('../img/BG-footer.jpg') center / cover no-repeat;
+
+    &__title {
+        color: #ffffff;
+        font-family: "Lato";
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 1.8px;
+        padding: 35px 0px;
     }
+
+    &__items {
+
+    }
+
+    &__column {
+
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex: 0 1 25%;
+        padding: 35px 0px;
+
+    }
+
+    &__item {
+        margin: 0vw 5vw;
+    }
+    
 }
+//======================================================================================================

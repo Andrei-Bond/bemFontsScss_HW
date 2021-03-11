@@ -8,7 +8,6 @@
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -75,8 +74,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .form-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
   margin: 0px -15px;
@@ -108,9 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   background-color: #fff;
-  -webkit-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -134,7 +129,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn span {
   z-index: 1;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
 }
@@ -148,7 +142,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:hover:after {
-  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -159,62 +152,40 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .mainBlock {
   height: 100vh;
   padding: 50px 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   position: relative;
   background: url(/img/BG-Header.jpg);
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
 .mainBlock__contetn {
   position: relative;
   z-index: 1;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .mainBlock__contetn .container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mainBlock__text {
@@ -266,33 +237,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mainBlock__footer {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .mainBlock__arrow {
   margin-top: 20%;
   margin-bottom: 25%;
   position: relative;
-  -webkit-animation: arrow 2s infinite ease;
-          animation: arrow 2s infinite ease;
-}
-
-@-webkit-keyframes arrow {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 10px;
-  }
-  100% {
-    top: 0;
-  }
+  animation: arrow 2s infinite ease;
 }
 
 @keyframes arrow {
@@ -315,16 +268,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .content
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .content
@@ -334,7 +281,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   text-transform: uppercase;
   margin: 0px 25px;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -374,8 +320,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
   margin: 0px -15px;
@@ -383,18 +327,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 550px) {
   .about__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .about__column {
   margin: 0px 0px 30px 0px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
+  flex: 0 1 33.333%;
   padding: 0px 15px;
 }
 
@@ -431,16 +370,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 92px;
   border: 3px solid #f1f1f1;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-about__icon_l img {
@@ -468,19 +401,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
   margin: 0px -15px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .portfolio__column {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  flex: 0 1 50%;
   padding: 10px 15px;
 }
 
@@ -498,16 +426,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .filter__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter__item {
@@ -517,7 +439,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin: 40px 25px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -527,4 +448,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .filter__item.active {
   color: #ada074;
+}
+
+.partners {
+  background: url("../img/BG-footer.jpg") center/cover no-repeat;
+}
+
+.partners__title {
+  color: #ffffff;
+  font-family: "Lato";
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.8px;
+  padding: 35px 0px;
+}
+
+.partners__column {
+  display: flex;
+  font-size: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 25%;
+  padding: 35px 0px;
+}
+
+.partners__item {
+  margin: 0vw 5vw;
 }
